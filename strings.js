@@ -1,3 +1,5 @@
+//Basic String---
+
 //1. Problem: First and Last Letters
 
 let word = "Sunflower";
@@ -20,7 +22,7 @@ if(name.length%2===0){
 
 }
 
-//Challenge: First Half and Second Half
+//Challenge 3: First Half and Second Half
 
 let nam = "Miracline";
 
@@ -38,6 +40,7 @@ if(nam.length%2===0){
     console.log('First Name',firstName)
     console.log('Last Name',lastName)
 }
+//challenge 4: Swapped the Middle name
 
 let names = "Miracline";
 
@@ -58,5 +61,38 @@ if(names.length % 2 === 0) {
 
     console.log('swapped:',names.slice(firstStiches)+second)
 
+}
 
+//💻 Challenge 5: Friendly Greeting Formatter
+
+let nameStr = "   miRAClinE   ";
+let trimedName = nameStr.trim();
+let toCapitalizedFirstLetter = trimedName[0].toUpperCase()
+let userName = toCapitalizedFirstLetter + trimedName.slice(1).toLowerCase()
+console.log(`"Hello, ${userName} You're looking amazing today 💖"`)
+
+//💻 Challenge 6: Email Validator & Cleaner
+
+let rawEmail = "  MIRACLINE123@GMAIL.Com   ";
+let trimedEmail = rawEmail.trim();
+let loweredTheEmail = trimedEmail.toLowerCase();
+
+if(loweredTheEmail.includes('@') && loweredTheEmail.includes('.')){
+  console.log('Valid email:',loweredTheEmail.replace('gmail','outlook'))
+}else{
+  console.log('Invalid email format')
+}
+
+//💻 Challenge 7: Word Reverser & Checker
+
+let input = "I love JavaScript"
+let reversedInput = input.split(" ").reverse().join(" ");
+console.log(reversedInput)
+
+if(reversedInput.startsWith('I')){
+  console.log('false')
+  return false
+}else{
+  console.log('True')
+  return true
 }
