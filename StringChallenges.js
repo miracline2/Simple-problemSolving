@@ -80,3 +80,8 @@ let string = ' Hello    World ';
 let removeExtraSpace = string.trim().replace(/\s+/g,'');
 
 console.log(removeExtraSpace)
+
+//Problem: Reverse Words in a String
+
+let Inputs = "Hello World from JavaScript"
+console.log(Inputs.split(' ').reverse().join(' '))
