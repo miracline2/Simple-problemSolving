@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dice Roller 🎲</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 100px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 20px;
+      background-color: #6200ea;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .dice {
+      font-size: 100px;
+      margin-top: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    .rolling {
+      animation: roll 0.5s linear infinite;
+    }
+
+    @keyframes roll {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(90deg); }
+      50% { transform: rotate(180deg); }
+      75% { transform: rotate(270deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎲 Dice Roller</h1>
+  <button onclick="rollDice()">Roll the Dice!</button>
+  <div class="dice" id="diceResult">🎲</div>
+
+  <script>
+    const diceEl = document.getElementById("diceResult");
+    const diceFaces = ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅"];
+
+    function rollDice() {
+      diceEl.classList.add("rolling");
+
+      setTimeout(() => {
+        const randomIndex = Math.floor(Math.random() * 6);
+        diceEl.textContent = diceFaces[randomIndex];
+        diceEl.classList.remove("rolling");
+      }, 1000); // Rolling duration
+    }   
+  </script>
+
+</body>
+</html>

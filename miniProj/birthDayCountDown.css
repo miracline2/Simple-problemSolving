@@ -1,0 +1,36 @@
+
+*{
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    /* background-color: rgb(233, 157, 233); */
+    color: black;
+   
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.Image{
+    align-items: center;
+    width: 150px;
+   
+}
+
+#birthDayCountDown {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff1493;
+    text-shadow: 1px 1px 3px #ffb6c1;
+    margin-top: 10px;
+}
